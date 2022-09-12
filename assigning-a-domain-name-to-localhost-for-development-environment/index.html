@@ -1,0 +1,9 @@
+If you edit your etc/hosts file you can assign an arbitrary host name to be set to 127.0.0.1. Open up /etc/hosts in your favorite text editor and add this line:
+
+127.0.0.1   www.example.com
+
+Unsure of how to avoid specifying the port in the HTTP requests you make to example.com, but if you must avoid specifying that at the request level, you could run nodejs as root to make it listen on port 80.
+
+Edit: After editing /etc/hosts, you may already have the DNS request for that domain cached. You can clear the cached entry by running this on the command line.
+
+dscacheutil -flushcache
