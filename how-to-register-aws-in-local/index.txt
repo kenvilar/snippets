@@ -1,0 +1,12 @@
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+1. install
+2. aws configure --profile union
+
+
+for example to input:
+
+AWS Access Key ID [None]: AKIAUXNKHY7NWMDXR5WU
+AWS Secret Access Key [None]: UVvMV9hqHrbRAE/bo1Vecl2qiyptc6CkKO0mxsrn
+Default region name [None]: us-east-1
+Default output format [None]: json
