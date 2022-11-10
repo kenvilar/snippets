@@ -4,4 +4,5 @@ Blog
 
 Github Projects
 
-2. https://github.com/karank07/shop-app
+1. https://github.com/karank07/shop-app
+2. https://github.com/jaydipvidhate/shopping-app-react-native
