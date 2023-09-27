@@ -12,3 +12,5 @@ react-with-typescript-best-practices
 remove-all-mac-generated-files-with-bash
 
 set-tbody-height-with-overflow-scroll
+
+setup-black-tool-in-pycharm
