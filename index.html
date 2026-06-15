@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ken Vilar Snippets</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+
+  <style>
+    a {
+      color: #1a0dab;
+      text-decoration: underline;
+    }
+
+    .year-today {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="px-[40px] py-[40px]">
+      <div class="max-w-[1440px] mx-auto">
+        <span class="year-today">1992</span>
+
+        <p>this page is using this script <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.js"
+            target="_blank" rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.js</a> or
+          this link <a href="https://kenvilar.github.io/snippets/index.js" target="_blank"
+            rel="noopener noreferrer">https://kenvilar.github.io/snippets/index.js</a></p>
+
+        <p>So in your website, add:</p>
+
+        <pre><code class="language-html">&lt;script defer src="https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.js"&gt;&lt;/script&gt;</code></pre>
+
+        <p>or</p>
+
+        <pre><code class="language-html">&lt;script defer src="https://kenvilar.github.io/snippets/index.js"&gt;&lt;/script&gt;</code></pre>
+
+        <div class="opacity-[0.6] mt-[20px]">
+          Note: <br />
+          jsDelivr caches the file, so it may still show the old version. You can force update it by purging the
+          jsDelivr cache. <br />
+
+          Open this URL in your browser: <a href="https://purge.jsdelivr.net/gh/kenvilar/snippets/index.js"
+            target="_blank" rel="noopener noreferrer">https://purge.jsdelivr.net/gh/kenvilar/snippets/index.js</a>
+          <br />
+
+          It should return something like success/ok. <br />
+
+          Then check CDN URL again: <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.js" target="_blank"
+            rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.js</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.js"></script>
+  <!-- <script src="./index.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
