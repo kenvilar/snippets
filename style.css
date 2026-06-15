@@ -1,0 +1,11 @@
+a {
+    color: #1a0dab;
+    text-decoration: underline;
+}
+
+.year-today {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
