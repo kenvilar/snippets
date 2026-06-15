@@ -24,7 +24,7 @@
 
         <pre><code class="language-html">&lt;script defer src="https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.min.js"&gt;&lt;/script&gt;</code></pre>
 
-        <div class="opacity-[0.6] mt-[20px]">
+        <div class="opacity-[0.6] mt-[20px] border border-gray-300 rounded p-[20px]">
           Note: <br />
           jsDelivr caches the file, so it may still show the old version. You can force update it by purging the
           jsDelivr cache. <br />
@@ -37,6 +37,16 @@
 
           Then check CDN URL again: <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.min.js" target="_blank"
             rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets/index.min.js</a>
+        </div>
+
+        <div class="opacity-[0.6] mt-[20px] border border-gray-300 rounded p-[20px]">
+          Note: <br />
+          GitHub does not automatically minify JS files <br />
+          What you're seeing is from jsDelivr. jsDelivr can automatically serve a minified version when you request:
+          <br />
+          index.min.js may only exist through jsDelivr. It does not mean GitHub created an actual index.min.js file in
+          your repo. <br />
+          You don't need Terser if you're okay with jsDelivr handling the minified CDN version.
         </div>
       </div>
     </div>
