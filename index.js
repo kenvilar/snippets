@@ -53,4 +53,37 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-word-to-bold]").forEach(boldWords);
   }
   kv_boldNWordsByDataAttributes();
+
+  // Copy Elements Into Matching Targets by Data Attribute
+  function kv_copyElementsToMatchingTargets() {
+    // find all triggers like: <div data-copy-element-trigger="1">
+    const triggers = Array.from(
+      document.querySelectorAll("[data-copy-element-trigger]")
+    );
+
+    triggers.forEach((trigger) => {
+      const key = trigger.getAttribute("data-copy-element-trigger");
+      if (!key) return;
+
+      // find matching target like: <div data-copy-element-target="1">
+      const target = document.querySelector(
+        `[data-copy-element-target="${CSS.escape(key)}"]`
+      );
+      if (!target) return;
+
+      // avoid adding duplicate copies
+      if (target.querySelector(`[data-copy-element-copy="${CSS.escape(key)}"]`))
+        return;
+
+      // clone the element (true = deep clone with children)
+      const copy = trigger.cloneNode(true);
+
+      // mark the clone so we can detect duplicates later
+      copy.setAttribute("data-copy-element-copy", key);
+
+      // append the cloned element into the target
+      target.appendChild(copy);
+    });
+  }
+  kv_copyElementsToMatchingTargets();
 });

@@ -15,67 +15,89 @@
   <section>
     <div class="px-[40px] py-[40px]">
       <div class="max-w-[1440px] mx-auto">
-        <div class="card">
-          <h2>Auto Update Current Year Text</h2>
-          <span class="year-today">1992</span>
-        </div>
+        <div class="flex gap-[10px] justify-between">
+          <div class="flex-1">
+            <div class="card">
+              <h2>Auto Update Current Year Text</h2>
+              <span class="year-today">1992</span>
+            </div>
 
-        <div class="card">
-          <h2>Bold First or Last N Words via Data Attributes</h2>
-          <div data-word-to-bold="2" data-bold-from="end">
-            Hi my name is Ken D. Vilar and I'm a software engineer.
+            <div class="card">
+              <h2>Bold First or Last N Words via Data Attributes</h2>
+              <div data-word-to-bold="2" data-bold-from="end">
+                Hi my name is Ken D. Vilar and I'm a software engineer.
+              </div>
+              <div data-word-to-bold="3" data-bold-from="start">
+                This will bold first three words
+              </div>
+
+              <div data-word-to-bold="2" data-bold-from="end">
+                This will bold last two words.
+              </div>
+            </div>
+
+            <div class="card">
+              <h2>Copy Elements Into Matching Targets by Data Attribute</h2>
+              <div data-copy-element-trigger="1" style="background: yellow; padding: 20px">
+                data-copy-element-trigger 1
+              </div>
+              <div data-copy-element-trigger="2" style="background: orange; padding: 20px">
+                data-copy-element-trigger 2
+              </div>
+              <div data-copy-element-target="1" style="background: red; padding: 20px">
+                data-copy-element-target="1"
+              </div>
+              <div data-copy-element-target="2" style="background: blue; padding: 20px">
+                data-copy-element-target="2"
+              </div>
+            </div>
           </div>
-          <div data-word-to-bold="3" data-bold-from="start">
-            This will bold first three words
+          <div class="max-w-[400px] w-full sticky top-[0px] self-start text-[12px]">
+            <p>this page is using this script <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js"
+                target="_blank"
+                rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js</a>
+            </p>
+
+            <p>So in your website, add:</p>
+
+            <pre><code class="language-html">&lt;script defer src="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js"&gt;&lt;/script&gt;</code></pre>
+
+            <div class="opacity-[0.6] mt-[20px] border border-gray-300 rounded py-[20px] px-[12px]">
+              Note: <br />
+              jsDelivr caches the file, so it may still show the old version. You can force update it by purging the
+              jsDelivr cache. <br />
+
+              Open these URLs in your browser: <br />
+              - <a href="https://purge.jsdelivr.net/gh/kenvilar/snippets@main/index.js" target="_blank"
+                rel="noopener noreferrer">https://purge.jsdelivr.net/gh/kenvilar/snippets@main/index.js</a>
+              <br />
+              - <a href="https://purge.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js" target="_blank"
+                rel="noopener noreferrer">https://purge.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js</a>
+              <br />
+
+              It should return something like success/ok. <br /><br />
+
+              Then check CDN URLs again: <br />
+              - <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.js" target="_blank"
+                rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.js</a>
+              <br />
+              - <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js" target="_blank"
+                rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js</a>
+              <br />
+              You should see the updated version now. <br />
+            </div>
+
+            <div class="opacity-[0.6] mt-[20px] border border-gray-300 rounded py-[20px] px-[12px]">
+              Note: <br />
+              GitHub does not automatically minify JS files <br />
+              What you're seeing is from jsDelivr. jsDelivr can automatically serve a minified version when you request:
+              <br />
+              index.min.js may only exist through jsDelivr. It does not mean GitHub created an actual index.min.js file
+              in
+              your repo. <br />
+              You don't need Terser if you're okay with jsDelivr handling the minified CDN version.
+            </div>
           </div>
-
-          <div data-word-to-bold="2" data-bold-from="end">
-            This will bold last two words.
-          </div>
-        </div>
-
-        <p>this page is using this script <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js"
-            target="_blank"
-            rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js</a>
-        </p>
-
-        <p>So in your website, add:</p>
-
-        <pre><code class="language-html">&lt;script defer src="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js"&gt;&lt;/script&gt;</code></pre>
-
-        <div class="opacity-[0.6] mt-[20px] border border-gray-300 rounded p-[20px]">
-          Note: <br />
-          jsDelivr caches the file, so it may still show the old version. You can force update it by purging the
-          jsDelivr cache. <br />
-
-          Open these URLs in your browser: <br />
-          - <a href="https://purge.jsdelivr.net/gh/kenvilar/snippets@main/index.js" target="_blank"
-            rel="noopener noreferrer">https://purge.jsdelivr.net/gh/kenvilar/snippets@main/index.js</a>
-          <br />
-          - <a href="https://purge.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js" target="_blank"
-            rel="noopener noreferrer">https://purge.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js</a>
-          <br />
-
-          It should return something like success/ok. <br /><br />
-
-          Then check CDN URLs again: <br />
-          - <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.js" target="_blank"
-            rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.js</a>
-          <br />
-          - <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js" target="_blank"
-            rel="noopener noreferrer">https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js</a>
-          <br />
-          You should see the updated version now. <br />
-        </div>
-
-        <div class="opacity-[0.6] mt-[20px] border border-gray-300 rounded p-[20px]">
-          Note: <br />
-          GitHub does not automatically minify JS files <br />
-          What you're seeing is from jsDelivr. jsDelivr can automatically serve a minified version when you request:
-          <br />
-          index.min.js may only exist through jsDelivr. It does not mean GitHub created an actual index.min.js file in
-          your repo. <br />
-          You don't need Terser if you're okay with jsDelivr handling the minified CDN version.
         </div>
       </div>
     </div>
