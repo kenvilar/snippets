@@ -1,3 +1,8 @@
+body {
+    font-size: 11px;
+    color: #333;
+}
+
 h2 {
     font-size: 32px;
     font-weight: bold;
@@ -12,12 +17,11 @@ a {
 .card {
     border: 1px solid #d1d5db;
     margin-bottom: 20px;
-    padding: 20px;
+    padding-block: 20px;
+    padding-inline: 12px;
 }
 
 .year-today {
-    font-size: 18px;
     font-weight: bold;
-    color: #333;
     margin-bottom: 20px;
 }
