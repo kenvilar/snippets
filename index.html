@@ -15,7 +15,24 @@
   <section>
     <div class="px-[40px] py-[40px]">
       <div class="max-w-[1440px] mx-auto">
-        <span class="year-today">1992</span>
+        <div class="card">
+          <h2>Auto Update Current Year Text</h2>
+          <span class="year-today">1992</span>
+        </div>
+
+        <div class="card">
+          <h2>Bold First or Last N Words via Data Attributes</h2>
+          <div data-word-to-bold="2" data-bold-from="end">
+            Hi my name is Ken D. Vilar and I'm a software engineer.
+          </div>
+          <div data-word-to-bold="3" data-bold-from="start">
+            This will bold first three words
+          </div>
+
+          <div data-word-to-bold="2" data-bold-from="end">
+            This will bold last two words.
+          </div>
+        </div>
 
         <p>this page is using this script <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js"
             target="_blank"
@@ -64,7 +81,8 @@
     </div>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js"></script> -->
+  <script src="./index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 </body>

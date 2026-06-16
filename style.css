@@ -1,6 +1,18 @@
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 a {
     color: #1a0dab;
     text-decoration: underline;
+}
+
+.card {
+    border: 1px solid #d1d5db;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .year-today {
