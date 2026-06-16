@@ -86,4 +86,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   kv_copyElementsToMatchingTargets();
+
+  // Copy Value/Text From One Element to Another by Matching Attribute Suffix
+  function copyTextToMatchingTargets() {
+    // Find every element that has ANY attribute that starts with "data-copy-text-"
+    const sources = Array.from(document.querySelectorAll("*")).filter((el) =>
+      Array.from(el.attributes).some((a) =>
+        a.name.startsWith("data-copy-text-")
+      )
+    );
+
+    sources.forEach((source) => {
+      Array.from(source.attributes).forEach((attr) => {
+        if (!attr.name.startsWith("data-copy-text-")) return;
+
+        // suffix example: data-copy-text-unique1 -> unique1
+        const key = attr.name.replace("data-copy-text-", "");
+        if (!key) return;
+
+        const target = document.querySelector(
+          `[data-paste-text-${CSS.escape(key)}]`
+        );
+        if (!target) return;
+
+        // copy attribute value (fallback to textContent if empty)
+        const val = attr.value || source.textContent || "";
+        target.textContent = val;
+      });
+    });
+  }
+  copyTextToMatchingTargets();
 });

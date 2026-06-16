@@ -51,6 +51,17 @@
                 data-copy-element-target="2"
               </div>
             </div>
+
+            <div class="card">
+              <h2>Copy Value/Text From One Element to Another by Matching Attribute Suffix</h2>
+              <style>
+                [data-copy-text-unique1]::before {
+                  content: attr(data-copy-text-unique1);
+                }
+              </style>
+              <div data-copy-text-unique1="kenvilars"></div>
+              <div data-paste-text-unique1></div>
+            </div>
           </div>
           <div class="w-[31%] max-[992px]:w-full sticky top-[0px] self-start text-[12px]">
             <p>This page is using this script <a href="https://cdn.jsdelivr.net/gh/kenvilar/snippets@main/index.min.js"
